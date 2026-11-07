@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventHub - Find & Book Exciting Events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Event<span>Hub</span></h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Discover & Attend Unforgettable Events</h2>
+            <p>Find concert tickets, tech workshops, music festivals, and networking meetups near you.</p>
+            <a href="#events" class="btn">Explore Events</a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events-section">
+        <h2>Upcoming Events</h2>
+        
+        <!-- Search and Filter Controls -->
+        <div class="filter-container">
+            <input type="text" id="search-bar" placeholder="Search events by name...">
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="Tech">Tech</option>
+                <option value="Music">Music</option>
+                <option value="Business">Business</option>
+            </select>
+        </div>
+
+        <!-- Event Cards Container -->
+        <div class="events-grid" id="events-container">
+            <!-- Event cards will be dynamically loaded via JS -->
+        </div>
+    </section>
+
+    <!-- Event Detail & Registration Modal / Section -->
+    <section id="register" class="registration-section">
+        <h2>Register for an Event</h2>
+        
+        <form id="registration-form">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" placeholder="Enter your full name">
+                <small class="error-msg" id="name-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" placeholder="Enter your email address">
+                <small class="error-msg" id="email-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" placeholder="Enter 10-digit mobile number">
+                <small class="error-msg" id="phone-error"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="event-select">Select Event *</label>
+                <select id="event-select">
+                    <option value="">-- Select an Event --</option>
+                    <option value="Tech Conference 2026">Tech Conference 2026</option>
+                    <option value="Summer Music Fest">Summer Music Fest</option>
+                    <option value="Startup Pitch Day">Startup Pitch Day</option>
+                </select>
+                <small class="error-msg" id="event-error"></small>
+            </div>
+
+            <button type="submit" class="btn-submit">Register Now</button>
+            <div id="success-message" class="success-message"></div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EventHub. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
